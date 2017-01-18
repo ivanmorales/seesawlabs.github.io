@@ -1,37 +1,15 @@
-_site
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# dependencies
+node_modules
 
-# Folder config file
-Desktop.ini
+# testing
+coverage
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# production
+build
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# misc
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+.env
+npm-debug.log

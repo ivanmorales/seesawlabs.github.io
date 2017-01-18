@@ -1,0 +1,51 @@
+@import "./../styles/media";
+
+$background: rgba(0,0,0,1);
+
+.ssl--navigation {
+  transition: background-color 500ms ease-in-out;
+  background: $background;
+
+  .ssl--nav-logo {
+    width: 164px;
+    height: 80px;
+    max-height: 80px;
+  }
+
+  .ssl--nav-item {
+    font-size: 14pt;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 1.2em;
+  }
+
+  @include mobile {
+    .ssl--nav-logo {
+      width: auto;
+      height: auto;
+      max-height: 20px;
+    }
+
+    .ssl--nav-group {
+      background: transparentize($background, .1);
+
+      > span {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.headroom {
+  &.headroom--unfixed {
+    .ssl--navigation {
+      background: $background;
+    }
+  }
+
+  &.headroom--pinned {
+    .ssl--navigation {
+      background-color: transparentize($background, .1);
+    }
+  }
+}
