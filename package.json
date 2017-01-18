@@ -2,6 +2,7 @@
   "name": "seesawlabs.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ivanmorales.github.io/seesawlabs.github.io/",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
@@ -66,7 +67,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "npm run build&&gh-pages -d build -t true"
   },
   "jest": {
     "collectCoverageFrom": [
