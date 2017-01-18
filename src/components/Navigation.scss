@@ -1,29 +1,49 @@
 @import "./../styles/media";
+@import "./../styles/fonts";
 
 $background: rgba(0,0,0,1);
 
 .ssl--navigation {
+  background: transparent;
   transition: background-color 500ms ease-in-out;
-  background: $background;
 
   .ssl--nav-logo {
-    width: 164px;
     height: 80px;
     max-height: 80px;
+    width: 164px;
   }
 
   .ssl--nav-item {
-    font-size: 14pt;
     color: #FFF;
-    text-decoration: none;
+    font-size: 14pt;
+    font-weight: bold;
     line-height: 1.2em;
+    position: relative;
+    text-decoration: none;
+
+    @include small {
+      &:before {
+        @include serif;
+        content: 'Our';
+        font-style: italic;
+        font-weight: 200;
+        left: 0;
+        position: absolute;
+        top: -0.9em;
+      }
+      &.ssl--nav-item-connect {
+        &:before {
+          content: 'Let\'s';
+        }
+      }
+    }
   }
 
   @include mobile {
     .ssl--nav-logo {
-      width: auto;
       height: auto;
       max-height: 20px;
+      width: auto;
     }
 
     .ssl--nav-group {
@@ -35,17 +55,18 @@ $background: rgba(0,0,0,1);
     }
   }
 }
-
+.headroom-wrapper {
+  background: $background;
+}
 .headroom {
+  background: transparentize($background, .5);
+  transition: background-color 500ms ease-in-out;
+
   &.headroom--unfixed {
-    .ssl--navigation {
-      background: $background;
-    }
+    background: transparentize($background, .5);
   }
 
   &.headroom--pinned {
-    .ssl--navigation {
-      background-color: transparentize($background, .1);
-    }
+    background-color: transparentize($background, .3);
   }
 }
