@@ -1,8 +1,41 @@
+@import "./../styles/colors";
+@import "./../styles/fonts";
+
 .hero {
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
+  color: $text-color;
+  height: 100vh;
+  text-align: center;
+  width: 100vw;
+
+  h1 {
+    font-size: 55pt;
+    font-weight: bold;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+    margin-top: 100px;
+  }
+
+  h3 {
+    @include serif;
+    font-size: 30pt;
+    font-style: italic;
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+
+  p {
+    font-style: italic;
+  }
 
   &.hero-1 {
-    background-image: url(./../assets/images/hero-1.jpg);
+    background-image: url(./../assets/images/backgrounds/desktop_hero.jpg);
+  }
+
+  > .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

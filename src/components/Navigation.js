@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import Headroom from 'react-headroom';
 
 import {
-  Container,
-
+  Image,
   Nav,
-  NavGroup,
+  Navbar,
   NavItem,
-  NavToggle
-} from 're-bulma';
+} from 'react-bootstrap';
+
+import { LinkContainer } from 'react-router-bootstrap';
 
 import logo from './../assets/images/nav-logo.png';
 import './Navigation.scss';
@@ -28,30 +27,34 @@ class Navigation extends Component {
   }
   render() {
     const routes = ['Work', 'Process', 'Crew', 'Connect'];
-    const toggle = this.state.toggle ? '__re-bulma_is-active' : '';
+    // const toggle = this.state.toggle ? '__re-bulma_is-active' : '';
 
     return (
       <Headroom>
-        <Container>
-          <Nav className="ssl--navigation">
-            <NavGroup align="left">
-              <NavItem isBrand>
-                <Link to=""><img src={logo} className="ssl--nav-logo" alt="logo" /></Link>
-              </NavItem>
-            </NavGroup>
-            <NavToggle onClick={this.toggleNavigation.bind(this)}/>
-            <NavGroup align="right" isMenu id="nav-menu" className={`ssl--nav-group ${toggle}`}>
-              {routes.map( (route, i) => {
-                let routeTo = route.toLowerCase().replace(/\W+/,'-');
-                return (
-                  <NavItem key={i} onClick={this.toggleNavigation.bind(this)}>
-                    <Link to={routeTo} className={'ssl--nav-item ssl--nav-item-' + routeTo}>{route.toUpperCase()}</Link>
-                  </NavItem>
-                );
-              })}
-            </NavGroup>
-          </Nav>
-        </Container>
+          <Navbar className="ssl--navigation" staticTop>
+            <Navbar.Header>
+              <LinkContainer to="">
+                <NavItem>
+                  <Image src={logo} className="ssl--nav-logo" alt="logo" />
+                </NavItem>
+              </LinkContainer>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse className="pull-right">
+              <Nav>
+                {routes.map( (route, i) => {
+                  let routeTo = route.toLowerCase().replace(/\W+/,'-');
+                  return (
+                    <LinkContainer key={i} to={routeTo}>
+                      <NavItem onClick={this.toggleNavigation.bind(this)} className={'ssl--nav-item ssl--nav-item-' + routeTo}>
+                        <span>{route.toUpperCase()}</span>
+                      </NavItem>
+                    </LinkContainer>
+                  );
+                })}
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
       </Headroom>
     );
   }

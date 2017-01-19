@@ -1,0 +1,14 @@
+@import "./styles/fonts";
+@import "./styles/colors";
+
+body {
+  background-color: $background;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html * {
+  font-size: 1em;
+  @include sans-serif;
+}

@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import {
-  Section,
-  Columns,
-  Column,
+  Grid,
+  Row,
+  Col,
   Image
-} from 're-bulma';
+} from 'react-bootstrap';
+
+import {
+  Section,
+} from './../ui';
 
 export class Rockstars extends Component {
   render() {
     return (
       <Section>
-        <Columns isMultiline>
-          {this.props.children}
-        </Columns>
+        <Grid>
+          <Row>
+            {this.props.children}
+          </Row>
+        </Grid>
       </Section>
     );
   }
@@ -26,9 +32,9 @@ export class Rockstar extends Component {
     } = this.props;
 
     return (
-      <Column size="is2">
+      <Col size="is2">
         <Image className="img-circle" src={avatar} title={name} />
-      </Column>
+      </Col>
     );
   }
 };

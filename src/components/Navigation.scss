@@ -1,44 +1,123 @@
 @import "./../styles/media";
 @import "./../styles/fonts";
+@import "./../styles/colors";
 
-$background: rgba(0,0,0,1);
-
+// Fancy Animated Underline
 .ssl--navigation {
-  background: transparent;
-  transition: background-color 500ms ease-in-out;
+  .ssl--nav-item {
+    a {
+      span {
+        position: relative;
 
-  .ssl--nav-logo {
-    height: 80px;
-    max-height: 80px;
-    width: 164px;
+        &:after {
+          width: 0;
+          height: 2px;
+          background-color: $ssl-yellow;
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          content: " ";
+          transform: translateX(-50%);
+          transition: width 200ms ease-in-out;
+        }
+      }
+
+      &:hover {
+        span:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Bootstrap Resets
+.ssl--navigation {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  li {
+    list-style: none none outside;
   }
 
-  .ssl--nav-item {
-    color: #FFF;
-    font-size: 14pt;
-    font-weight: bold;
-    line-height: 1.2em;
-    position: relative;
-    text-decoration: none;
+  @include small {
+    > .container {
+      transform: translateY(-50%);
+      top: 50%;
+      position: relative;
 
-    @include small {
-      &:before {
-        @include serif;
-        content: 'Our';
-        font-style: italic;
-        font-weight: 200;
-        left: 0;
-        position: absolute;
-        top: -0.9em;
+      .navbar-nav > li:last-child a {
+        padding-right: 0;
       }
-      &.ssl--nav-item-connect {
+    }
+  }
+}
+
+// Menu Nav Item Prefixes
+.ssl--navigation {
+  .ssl--nav-item {
+    @include small {
+      a {
+        &:before {
+          @include serif;
+          content: 'Our';
+          font-style: italic;
+          font-weight: 200;
+          position: absolute;
+          top: 0;
+          font-size: 11pt;
+        }
+      }
+
+      &.ssl--nav-item-connect a {
         &:before {
           content: 'Let\'s';
         }
       }
     }
   }
+}
 
+// Style the nav bar
+.ssl--navigation {
+  background: transparent;
+  transition: background-color 500ms ease-in-out;
+  height: 100px;
+
+  @include small {
+    .ssl--nav-logo {
+      margin-top: -15px;
+    }
+  }
+
+  .ssl--nav-logo {
+    height: 60px;
+    max-height: 80px;
+  }
+
+  .ssl--nav-item {
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 1.2em;
+    position: relative;
+    text-decoration: none;
+    color: $nav-text-color !important;
+    text-align: left;
+
+    a {
+      color: $nav-text-color !important;
+    }
+
+    @include small {
+      a {
+        padding-left: 1.5em;
+        font-size: 13pt;
+      }
+    }
+  }
+
+  // Mobile stuff
   @include mobile {
     .ssl--nav-logo {
       height: auto;
@@ -47,7 +126,7 @@ $background: rgba(0,0,0,1);
     }
 
     .ssl--nav-group {
-      background: transparentize($background, .1);
+      background: transparentize($nav-background, .1);
 
       > span {
         border-top: 0;
@@ -55,18 +134,22 @@ $background: rgba(0,0,0,1);
     }
   }
 }
+
+// Headroom Stuff
 .headroom-wrapper {
-  background: $background;
-}
-.headroom {
-  background: transparentize($background, .5);
-  transition: background-color 500ms ease-in-out;
+  position: absolute;
+  width: 100%;
 
-  &.headroom--unfixed {
-    background: transparentize($background, .5);
-  }
+  .headroom {
+    background: transparentize($nav-background, .1);
+    transition: background-color 500ms ease-in-out;
 
-  &.headroom--pinned {
-    background-color: transparentize($background, .3);
+    &.headroom--unfixed {
+      background: transparentize($nav-background, .2);
+    }
+
+    &.headroom--pinned {
+      background-color: transparentize($nav-background, .2);
+    }
   }
 }

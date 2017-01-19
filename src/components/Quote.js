@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
-  Title,
-  Content,
-  Section,
   Image,
   Media,
-  MediaLeft,
-  MediaContent
-} from 're-bulma';
+} from 'react-bootstrap';
+
+import {
+  Title,
+  Section,
+} from './../ui';
 
 import defaultAvatar from './../assets/images/default-avatar.jpg';
 
@@ -40,17 +40,12 @@ export class Who extends Component {
 
     return (
       <Media>
-        <MediaLeft>
-          <Image
-            src={avatar || defaultAvatar}
-            size="is32X32"
-            ratio="isSquare"/>
-        </MediaLeft>
-        <MediaContent>
-          <Content>
-            <p>{firstName}, {lastName}<br/>{from}</p>
-          </Content>
-        </MediaContent>
+        <Media.Left>
+          <Image src={avatar || defaultAvatar}/>
+        </Media.Left>
+        <Media.Body>
+          <p>{firstName}, {lastName}<br/>{from}</p>
+        </Media.Body>
       </Media>
     );
   }

@@ -3,11 +3,10 @@ import React, { Component } from 'react';
 import {
   Container,
   Section,
-  Title,
-  Content
-} from 're-bulma';
+  Title
+} from './../ui';
 
-import { Hero } from './Hero';
+import { Hero } from './../components/Hero';
 
 class OurCrew extends Component {
   constructor(args) {
@@ -44,7 +43,7 @@ class OurCrew extends Component {
           return (
             <Section key={i} className="has-text-centered">
               <Title>{item.title}</Title>
-              <Content>{item.content}</Content>
+              <p>{item.content}</p>
             </Section>
           );
         })}

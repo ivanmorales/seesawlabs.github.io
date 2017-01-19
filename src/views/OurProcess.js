@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import {
   Container
-} from 're-bulma';
+} from './../ui';
 
-import { Hero } from './Hero';
-import Processes from './Processes';
+import { Hero } from './../components/Hero';
+import Processes from './../components/Processes';
 
 class OurProcess extends Component {
   render() {

@@ -1,3 +1,7 @@
 @mixin serif {
-  font-family: "Georgia", serif; 
+  font-family: 'Libre Baskerville', serif !important;
+}
+
+@mixin sans-serif {
+  font-family: 'Open Sans', sans-serif !important;
 }

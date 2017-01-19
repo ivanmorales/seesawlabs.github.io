@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import {
   Footer,
   Container,
-  Content,
+} from './../ui';
+
+import {
+  Grid,
+  Row,
+  Col,
   Image,
-  Columns,
-  Column
-} from 're-bulma';
+} from 'react-bootstrap';
 
 import FontAwesome from 'react-fontawesome';
 
@@ -19,20 +22,19 @@ export default class SSLFooter extends Component {
     return (
       <Footer>
         <Container>
-          <Content>
-            <Columns>
-              <Column>
+          <Grid>
+            <Row>
+              <Col>
                 <p>© {year} SeeSaw Labs. All Right Reserved</p>
-              </Column>
-              <Column>
+              </Col>
+              <Col>
                 <Image src={logo}/>
-              </Column>
-              <Column>
+              </Col>
+              <Col>
                 <a href="#"><FontAwesome name="linkedin" /></a>
-                <a href="#"><FontAwesome name="twitter" /></a>
-              </Column>
-            </Columns>
-          </Content>
+              </Col>
+            </Row>
+          </Grid>
         </Container>
       </Footer>
     );

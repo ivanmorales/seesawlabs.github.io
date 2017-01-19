@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import {
-  Columns,
-  Column,
+  Col,
+  Grid,
+  Row,
   Button,
+} from 'react-bootstrap';
+
+import {
   Section,
   Title,
-  Subtitle
-} from 're-bulma';
+} from './../ui';
 
 export class CaseStudy extends Component {
   render() {
@@ -21,29 +24,30 @@ export class CaseStudy extends Component {
     } = this.props;
 
     const action = (
-      <Column className="is-centered">
+      <Col>
         <Section className="has-text-centered">
           {link && <Link to={link}>
             <Button size="isMedium">{buttonText}</Button>
           </Link>}
         </Section>
-      </Column>
+      </Col>
     );
 
     const text = (
-      <Column>
+
+      <Col>
         <Section>
-          <Subtitle>{subTitle}</Subtitle>
+          <h4>{subTitle}</h4>
           <Title>{title}</Title>
           {this.props.children}
         </Section>
-      </Column>
+      </Col>
     );
 
     if (align === 'left') {
-      return <Columns>{action}{text}</Columns>;
+      return <Grid><Row>{action}{text}</Row></Grid>;
     }
 
-    return <Columns>{text}{action}</Columns>;
+    return <Grid><Row>{text}{action}</Row></Grid>;
   }
 };

@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
-  Section,
-  Title,
-  Content
-} from 're-bulma';
+  Alert
+} from 'react-bootstrap';
 
 export class Processes extends Component {
   render() {
@@ -15,19 +13,19 @@ export class Processes extends Component {
 
     if (!processes) {
       return (
-        <Section>
-          <Title>Nothing to see here</Title>
-        </Section>
+        <Alert bsStyle="warning">
+          <h2>Nothing to see here</h2>
+        </Alert>
       );
     }
     return (
       <div>
         {processes.map( (item, i)=> {
           return (
-            <Section key={i} className="has-text-centered">
-              <Title>{item.title}</Title>
-              <Content>{item.content}</Content>
-            </Section>
+            <section key={i} className="has-text-centered">
+              <h3>{item.title}</h3>
+              <p>{item.content}</p>
+            </section>
           );
         })};
       </div>
@@ -38,7 +36,9 @@ export class Processes extends Component {
 class ProcessContainer extends Component {
   render() {
     return (
-      <Processes processes={this.props.sections.processes} />
+      <Processes
+        processes={this.props.sections.processes}
+      />
     );
   }
 };

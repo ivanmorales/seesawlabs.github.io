@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
 import {
+  Grid,
+  Row,
+  Col
+} from 'react-bootstrap';
+
+import {
   Container,
   Section,
   Title,
-  Content,
-  Columns,
-  Column
-} from 're-bulma';
+} from './../ui';
 
-import { Hero } from './Hero';
-import { CaseStudy } from './CaseStudy';
+import { Hero } from './../components/Hero';
+import { CaseStudy } from './../components/CaseStudy';
 
 class OurWork extends Component {
   render() {
@@ -47,8 +50,9 @@ class OurWork extends Component {
           to show what services were used by the client for this
           project.</p>
         </CaseStudy>
-        <Columns>
-          <Column>
+        <Grid>
+        <Row>
+          <Col>
             <Section className="has-text-centered is-centered">
               <Title>FOCUS ONE</Title>
               <p>This is one of the things we are the best at
@@ -58,8 +62,8 @@ class OurWork extends Component {
               Hovering might change to a branding color
               overlay and hyperlink to works page.</p>
             </Section>
-          </Column>
-          <Column align="center">
+          </Col>
+          <Col>
             <Section className="has-text-centered is-centered">
               <Title>FOCUS TWO</Title>
               <p>This is the other thing we are the best at and
@@ -69,15 +73,16 @@ class OurWork extends Component {
                 Hovering might change to a branding color
                 overlay and hyperlink to works page.</p>
             </Section>
-          </Column>
-        </Columns>
+          </Col>
+        </Row>
+      </Grid>
         {Array(3).fill().map( (_,i)=> {
           return (
             <Section key={i} className="has-text-centered">
               <Title>Other Service {i}</Title>
-              <Content>
+              <p>
                 More detailed text about this specific service. These three sections will likely be from our current menu of services where they do not overlap the two main focuses above. Their function is to round out a bit the types of things we want to be doing and convey a breadth of knowledge without being too general.
-              </Content>
+              </p>
             </Section>
           );
         })}
