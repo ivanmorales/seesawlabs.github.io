@@ -1,0 +1,25 @@
+@import "./../styles/fonts";
+@import "./../styles/colors";
+
+.ssl--focus-container {
+  background-image: url(./../assets/images/backgrounds/desktop_focus.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ssl--focus {
+  color: $text-color;
+  font-size: 12pt;
+  font-style: italic;
+  text-align: center;
+  padding: 2em 1em;
+
+  h3 {
+    color: $text-color;
+    font-size: 20pt;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+}

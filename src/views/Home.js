@@ -19,6 +19,7 @@ import { Quote, Text, Who } from './../components/Quote';
 import { CaseStudy } from './../components/CaseStudy';
 import { Rockstars, Rockstar } from './../components/Rockstars';
 import { SSLPick } from './../components/Pick';
+import { Focus } from './../components/Focus';
 
 class Home extends Component {
   constructor(args) {
@@ -47,30 +48,27 @@ class Home extends Component {
             more impressively than the last</p>
           <SSLPick action="connect">Let's Play</SSLPick>
         </Hero>
-        <section>
+        <section className="ssl--focus-container">
           <Grid>
             <Row>
-              <Col>
-                <Section className="has-text-centered is-centered">
-                  <Title header="h3">FOCUS ONE</Title>
-                  <p>This is one of the things we are the best at
-                  and a little bit of context for you to imagine
-                  yourself using this service. Background photo
-                  instills all the confidence that it’s a real thing.
-                  Hovering might change to a branding color
-                  overlay and hyperlink to works page.</p>
-                </Section>
+              <Col xs={12} sm={6}>
+                <Focus title="Digital Execution">
+                  <p>The difference between stellar execution and "almost works"
+                    happens backstage.</p>
+
+                  <p>We rock at full-lifecycle, cross-platform execution&emdash;
+                    taking you from big idea to production reality&dots;and
+                    keeping you there</p>
+                </Focus>
               </Col>
-              <Col>
-                <Section className="has-text-centered is-centered">
-                  <Title header="h3">FOCUS TWO</Title>
-                  <p>This is the other thing we are the best at and
-                    a little bit of context for you to imagine
-                    yourself using this service. Background photo
-                    instills all the confidence that it’s a real thing.
-                    Hovering might change to a branding color
-                    overlay and hyperlink to works page.</p>
-                </Section>
+              <Col xs={12} sm={6}>
+                <Focus title="Digital Innovation">
+                  <p>Virtual reality, artificial intelligence, chat bots, touch
+                    screen interfaces&emdash;we can't get enough of building
+                    cool stuff.</p>
+
+                  <p>Let's blaze a new trail together</p>
+                </Focus>
               </Col>
             </Row>
           </Grid>

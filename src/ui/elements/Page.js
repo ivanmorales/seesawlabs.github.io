@@ -6,7 +6,7 @@ import {
 class Container extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div className={`container ${this.props.className}`}>
         {this.props.children}
         <Clearfix/>
       </div>
@@ -17,7 +17,7 @@ class Container extends React.Component {
 class Section extends React.Component {
   render() {
     return (
-      <section className="container">
+      <section className={this.props.className}>
         {this.props.children}
         <Clearfix/>
       </section>
