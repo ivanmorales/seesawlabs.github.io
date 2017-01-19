@@ -4,6 +4,20 @@ import { Link } from 'react-router';
 import "./Pick.scss";
 
 export class SSLPick extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      swing: true
+    };
+
+  }
+  swingMe() {
+    this.setState({
+      swing: !this.state.swing
+    });
+  }
+
   render() {
     const {
       action
@@ -20,7 +34,11 @@ export class SSLPick extends Component {
     }
 
     return (
-      <div className={`ssl--pick ${this.props.className} animated swing`}>{content}</div>
+      <div
+        className={`ssl--pick ${this.props.className} animated ${this.state.swing ? 'swing' : ''}`}
+        onMouseOver={this.swingMe.bind(this)}
+        onMouseLeave={this.swingMe.bind(this)}
+        >{content}</div>
     );
   }
 };
