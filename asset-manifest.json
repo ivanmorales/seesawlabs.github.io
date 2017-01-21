@@ -1,9 +1,17 @@
 {
-  "main.css": "static/css/main.f9965104.css",
-  "main.css.map": "static/css/main.f9965104.css.map",
-  "main.js": "static/js/main.fec0793b.js",
-  "main.js.map": "static/js/main.fec0793b.js.map",
+  "main.css": "static/css/main.6a3cc4fa.css",
+  "main.css.map": "static/css/main.6a3cc4fa.css.map",
+  "main.js": "static/js/main.3b13e068.js",
+  "main.js.map": "static/js/main.3b13e068.js.map",
+  "static/media/caseStudy_linknyc.png": "static/media/caseStudy_linknyc.09d95139.png",
   "static/media/default-avatar.jpg": "static/media/default-avatar.d5f51047.jpg",
-  "static/media/hero-1.jpg": "static/media/hero-1.ba81c2e6.jpg",
-  "static/media/nav-logo.png": "static/media/nav-logo.fcc58b7d.png"
+  "static/media/desktopLogo.svg": "static/media/desktopLogo.09bd2491.svg",
+  "static/media/desktop_caseStudy_home.jpg": "static/media/desktop_caseStudy_home.faaefede.jpg",
+  "static/media/desktop_focus.jpg": "static/media/desktop_focus.d678e92f.jpg",
+  "static/media/desktop_hero.jpg": "static/media/desktop_hero.6e8ed2d2.jpg",
+  "static/media/labs_lemlet.png": "static/media/labs_lemlet.f3fc3426.png",
+  "static/media/nav-logo.png": "static/media/nav-logo.fcc58b7d.png",
+  "static/media/pick.svg": "static/media/pick.2331fcda.svg",
+  "static/media/quoteHeadshot.png": "static/media/quoteHeadshot.8cec8337.png",
+  "static/media/rockstars.png": "static/media/rockstars.3887e82f.png"
 }
