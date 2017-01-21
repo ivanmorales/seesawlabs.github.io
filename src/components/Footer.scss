@@ -1,0 +1,11 @@
+@import "./../styles/colors";
+@import "./../styles/fonts";
+
+.ssl--footer {
+  background-color: $footer-background;
+  padding: 2rem 0;
+
+  .ssl--footer-logo {
+    max-height: 50px;
+  }
+}

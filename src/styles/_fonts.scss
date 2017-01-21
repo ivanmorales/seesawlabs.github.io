@@ -1,7 +1,14 @@
 @mixin serif {
-  font-family: 'Libre Baskerville', serif !important;
+  font-family: 'Libre Baskerville', Helvetica !important;
 }
-
+@mixin serif-italic {
+  @include serif;
+  font-style: italic;
+}
 @mixin sans-serif {
   font-family: 'Open Sans', sans-serif !important;
+}
+@mixin extrabold {
+  @include sans-serif;
+  font-weight: bold;
 }

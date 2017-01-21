@@ -1,0 +1,49 @@
+@import "./../styles/colors";
+@import "./../styles/fonts";
+
+.ssl--quote {
+  color: $text-color;
+  padding-bottom: 8em;
+  padding-top: 8em;
+  text-align: center;
+
+  p {
+    @include serif;
+    font-size: 18pt;
+    font-style: italic;
+  }
+
+  .media {
+    display: inline-block;
+    margin: 2em auto 0;
+    position: relative;
+
+    img {
+      width: 81px;
+    }
+
+    .media-left {
+      width: 50px;
+    }
+
+    .media-body {
+      position: relative;
+      text-align: left;
+      transform: translateY(25%);
+      width: auto;
+
+      p {
+        @include serif;
+        font-size: 15pt;
+        font-style: italic;
+        line-height: 1em;
+      }
+
+      strong {
+        @include sans-serif;
+        font-size: 12pt;
+        font-style: normal;
+      }
+    }
+  }
+}

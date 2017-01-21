@@ -1,0 +1,25 @@
+@import "./../styles/colors";
+@import "./../styles/fonts";
+@import "./../styles/media";
+
+.ssl--rockstars {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  color: $text-color;
+
+  h2 {
+    @include serif-italic;
+    font-size: 24pt;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  button {
+    margin-top: 4rem;
+  }
+}

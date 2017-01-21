@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+
 import {
   Footer,
   Container,
@@ -13,24 +15,26 @@ import {
 
 import FontAwesome from 'react-fontawesome';
 
-import logo from './../assets/images/nav-logo.png';
+import logo from './../assets/images/desktopLogo.svg';
+import './Footer.scss';
+
 
 export default class SSLFooter extends Component {
   render() {
     const year = (new Date()).getFullYear();
 
     return (
-      <Footer>
+      <Footer className="ssl--footer">
         <Container>
           <Grid>
             <Row>
-              <Col>
+              <Col sm="4">
                 <p>© {year} SeeSaw Labs. All Right Reserved</p>
               </Col>
-              <Col>
-                <Image src={logo}/>
+              <Col sm="4">
+                <Link to=""><Image src={logo} className="ssl--footer-logo"/></Link>
               </Col>
-              <Col>
+              <Col sm="4" className="text-right">
                 <a href="#"><FontAwesome name="linkedin" /></a>
               </Col>
             </Row>

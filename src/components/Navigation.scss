@@ -144,12 +144,12 @@
     background: transparentize($nav-background, .1);
     transition: background-color 500ms ease-in-out;
 
-    &.headroom--unfixed {
-      background: transparentize($nav-background, .2);
-    }
-
-    &.headroom--pinned {
+    &.headroom--unfixed, &.headroom--pinned {
       background-color: transparentize($nav-background, .2);
+
+      &:hover {
+        background-color: transparentize($nav-background, .1);
+      }
     }
   }
 }

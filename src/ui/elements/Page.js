@@ -3,7 +3,7 @@ import {
   Clearfix
 } from 'react-bootstrap';
 
-class Container extends React.Component {
+export class Container extends React.Component {
   render() {
     return (
       <div className={`container ${this.props.className}`}>
@@ -14,10 +14,10 @@ class Container extends React.Component {
   }
 };
 
-class Section extends React.Component {
+export class Section extends React.Component {
   render() {
     return (
-      <section className={this.props.className}>
+      <section className={`container ${this.props.className}`}>
         {this.props.children}
         <Clearfix/>
       </section>
@@ -25,7 +25,7 @@ class Section extends React.Component {
   }
 };
 
-class Footer extends React.Component {
+export class Footer extends React.Component {
   render() {
     return (
       <footer className={`footer ${this.props.className}`}>
@@ -35,7 +35,7 @@ class Footer extends React.Component {
   }
 };
 
-class Title extends React.Component {
+export class Title extends React.Component {
   render() {
     const {
       header
@@ -58,11 +58,4 @@ class Title extends React.Component {
         return <p className={this.props.className}>{this.props.children}</p>;
     }
   }
-};
-
-export {
-  Container,
-  Footer,
-  Section,
-  Title,
 };

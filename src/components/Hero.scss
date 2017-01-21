@@ -2,13 +2,12 @@
 @import "./../styles/fonts";
 
 .hero {
-  background-position: center center;
-  background-size: cover;
+  background-color: transparent;
   color: $text-color;
   height: 100vh;
-  text-align: center;
-  width: 100vw;
   margin-bottom: 0;
+  text-align: center;
+  width: 100%;
 
   h1 {
     font-size: 55pt;
@@ -28,10 +27,6 @@
 
   p {
     font-style: italic;
-  }
-
-  &.hero-1 {
-    background-image: url(./../assets/images/backgrounds/desktop_hero.jpg);
   }
 
   > .container {

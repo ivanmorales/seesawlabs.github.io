@@ -1,3 +1,5 @@
-export default {
-  SECTIONS_GET: 'SECTIONS_GET'
+const SECTIONS_GET = 'SECTIONS_GET'
+
+export {
+  SECTIONS_GET,
 };

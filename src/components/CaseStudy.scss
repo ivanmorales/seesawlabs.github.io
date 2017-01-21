@@ -1,0 +1,103 @@
+@import './../styles/colors';
+@import './../styles/fonts';
+@import './../styles/media';
+
+.ssl--casestudy {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+
+    > * {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.ssl--casestudy-linknyc {
+  .ssl--casestudy-cta {
+    figure {
+      background-image: url("./../assets/images/caseStudy_linknyc.png");
+      background-position: 100% center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 300px;
+      width: 78px;
+      position: absolute;
+      left: 4rem;
+    }
+  }
+}
+
+.ssl--casestudy-lemlet {
+  .ssl--casestudy-cta {
+    figure {
+      background-image: url("./../assets/images/labs_lemlet.png");
+      background-position: 100% center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 300px;
+      width: 175px;
+      position: absolute;
+      right: 4rem;
+    }
+  }
+}
+
+.ssl--casestudy {
+  color: $text-color;
+  overflow: hidden;
+  height: 250px;
+
+  .row > * {
+    height: 250px;
+  }
+
+  &.ssl--casestudy-right {
+    .ssl--casestudy-content {
+      text-align: right;
+    }
+  }
+
+  h4 {
+    @include serif-italic;
+    font-size: 12pt;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @include extrabold;
+    font-size: 22pt;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 11pt;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    @include medium {
+      right: auto;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    };
+  }
+
+  .ssl--casestudy-content {
+    position: relative;
+
+    > div {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
